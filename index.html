@@ -36,12 +36,14 @@
     <h2 id="textoutput" class="center">Show results here</h2>
   </div>
   <script type="text/javascript">
-    function text()
-	{
-    var input = document.getElementById('entryinput').value;
-    alert('Siddhanth Naik:'+input);
-    document.getElementById('textoutput').innerHTML = input;
+    var button = document.getElementById('entrybutton');
+    function showMeText(){
+    var textbox = document.getElementById('entryinput');
+    document.getElementById('textoutput').innerHTML = textbox.value;
+    alert("Siddhanth Naik: " + textbox.value);
     }
+    button.addEventListener('click', showMeText);
+   
   </script>
 </body>
 </html>
